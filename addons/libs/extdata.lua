@@ -1927,7 +1927,7 @@ function decode.Hourglass(str)
 --        entry_time = str:unpack('I',13),
         zone_id = str:unpack('H',17),
         status_id = str:byte(3)%4,
-        status = statuses[rettab.status_id],
+        status = statuses[str:byte(3)%4],
         _unknown1 = str:unpack('i',5)
     }
     
